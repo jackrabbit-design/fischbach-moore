@@ -78,7 +78,8 @@ $right_img = get_field('right_featured_image');
                 	<div id="aside-slider-wrap">
                     	<div class="aside-pager"></div>
                         
-                    	<ul id="aside-slider" class="cycle-slideshow" data-cycle-fx="fade" 
+                    	<ul id="aside-slider" class="cycle-slideshow"
+                    		data-cycle-fx=scrollHorz
                             data-cycle-pager=".aside-pager"
                             data-cycle-timeout=1
                             data-cycle-swipe=true
@@ -187,7 +188,7 @@ $right_img = get_field('right_featured_image');
 			<div id="box<?php echo ($post->ID); ?>" class="protfolio-single">
         	<h4><?php the_title(); ?></h4>
             <div class="portfolio-slider-wrap">
-				<ul class="portfolio-slider cycle-slideshow" data-cycle-fx="fade" 
+				<ul class="portfolio-slider cycle-slideshow" data-cycle-fx=scrollHorz  
                     data-cycle-pager=".portfolio-pager1<?php echo ($post->ID); ?>"
                     data-cycle-swipe=true
                     data-cycle-swipe-fx=scrollHorz
@@ -242,10 +243,11 @@ $right_img = get_field('right_featured_image');
 <script>
 $('.cycle-slideshow').cycle({
 	fx:'fade', 
-    speed:1500, 
+    speed:250, 
     timeout:3500, 
-    pause:1 
-});
+    pause:1,
+
+}).cycle('pause');
 </script>
 <?php 
 get_footer();

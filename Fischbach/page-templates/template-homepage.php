@@ -73,28 +73,46 @@ $home_bg =  get_field( "image_home" );
                         	<strong><?php the_field('heading_proud'); ?></strong>
                             
                             <div class="clearfix inner-wrap">
-                            	<div class="col-one pull-left box">
-                                	<div class="clearfix">
-                                    	<div class="logo pull-left">
-                                        	<img src="<?php the_field('image_left_proud'); ?>" width="50" height="51" alt="" />
-                                        </div>
-                                        <div class="content pull-right">
-                                        	<h5><?php the_field('title_left_proud'); ?></h5>
-                                            <p><?php the_field('short_description_left_proud'); ?></p>
-                                        </div>
-                                    </div>
-                                </div><!--col-one-->
-                                <div class="col-two pull-right box">
-                                	<div class="clearfix">
-                                    	<div class="logo pull-left">
-                                        	<img src="<?php the_field('image_right_proud'); ?>" width="50" height="51" alt="" />
-                                        </div>
-                                        <div class="content pull-right">
-                                        	<h5><?php the_field('title_right_proud'); ?></h5>
-                                            <p><?php the_field('short_description_right_proud'); ?></p>
-                                        </div>
-                                    </div>
-                                </div><!--col-one-->
+                            	<div class="member-row">
+	                            	<div class="col-one pull-left box">
+	                                	<div class="clearfix">
+	                                    	<div class="logo pull-left">
+	                                        	<img src="<?php the_field('image_left_proud'); ?>" width="50" height="51" alt="" />
+	                                        </div>
+	                                        <div class="content pull-right">
+	                                        	<h5><?php the_field('title_left_proud'); ?></h5>
+	                                            <p><?php the_field('short_description_left_proud'); ?></p>
+	                                        </div>
+	                                    </div>
+	                                </div><!--col-one-->
+	                                <div class="col-two pull-right box">
+	                                	<div class="clearfix">
+	                                    	<div class="logo pull-left">
+	                                        	<img src="<?php the_field('image_right_proud'); ?>" width="50" height="51" alt="" />
+	                                        </div>
+	                                        <div class="content pull-right">
+	                                        	<h5><?php the_field('title_right_proud'); ?></h5>
+	                                            <p><?php the_field('short_description_right_proud'); ?></p>
+	                                        </div>
+	                                    </div>
+	                                </div><!--col-two-->
+                            	</div>
+
+                                <div class="member-row-bottom">
+	       							<div class="col-one pull-left box">
+	                                	<div class="clearfix">
+	                                    	<div class="logo pull-left">
+	                                    		<?php $imagePL = get_field('image_left_proud_2'); ?>
+	                                        	<img src="<?php echo $imagePL; ?>" width="50" height="51" alt="" />
+	                                        </div>
+	                                        <div class="content pull-right">
+	                                        	<h5><?php the_field('title_left_proud_2'); ?></h5>
+	                                            <p><?php the_field('short_description_left_proud_2'); ?></p>
+	                                        </div>
+	                                    </div>
+	                                </div><!--col-one-->
+
+                                </div>
                             </div>
                         </div><!--box-two-->
 						 <?php } ?>	
