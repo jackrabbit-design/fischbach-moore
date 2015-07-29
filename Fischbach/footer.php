@@ -19,7 +19,7 @@
                 
                 <div class="pull-right col-two">
                 	<div>
-                    	<a href="#" class="clearfix f-red-btn">
+                    	<a href="http://www.sullymac.com/" target="_blank" class="clearfix f-red-btn">
                             <div class="pull-left box-one">
                             <?php echo get_option('fischbach_addright'); ?>
                             </div>
