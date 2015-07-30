@@ -41,6 +41,14 @@ jQuery(function($){
 	_mobilemenu();
 	_portfolioFilter();
 	_portfolioPopUp();
+
+	if(window.location.hash) {
+		var hash = window.location.hash.substring(1);
+			$('#portfolio-items li.mix a#'+hash).trigger('click');
+		} else {
+
+	}
+
 });
 
 function _mobilemenu(){
@@ -121,10 +129,16 @@ function _portfolioPopUp(){
 		inline:true, 
 		width:95+"%",
 		maxWidth:970+"px",
-		scrolling: false
+		scrolling: false,
+		onClosed: function() {
+			history.pushState("", document.title, window.location.pathname);
+		}
 	});
 }
 
+function _hashLink(){
+
+}
 
 
 $(window).resize(function(){

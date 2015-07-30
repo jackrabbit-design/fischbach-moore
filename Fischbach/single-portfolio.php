@@ -1,0 +1,1 @@
+<?php wp_redirect( get_permalink(84).'#'.$post->post_name );  exit; ?>

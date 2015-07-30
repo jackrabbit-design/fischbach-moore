@@ -1,6 +1,6 @@
 <?php
 /* 
-Template Name: Portfolio
+
  */
  get_header();
 ?>
@@ -67,7 +67,7 @@ Template Name: Portfolio
                             <div class="logo" style="background-image:url(<?php echo (wp_get_attachment_url( get_post_thumbnail_id($post->ID) ));?>)"></div>
                             <h3><?php the_title(); ?></h3>
                             <?php the_excerpt();?>
-                            <a href="#box<?php echo ($post->ID); ?>" id = "<?php echo ($post->ID); ?>"class="more black-btn hover-red portfolio-popup">VIEW PROJECT</a>
+                            <a href="#box<?php echo ($post->ID); ?>" id = "<?php echo ($post->ID); ?>" class="more black-btn hover-red portfolio-popup">VIEW PROJECT</a>
                     </li>			
 				<?php
 				endwhile;
