@@ -39,8 +39,9 @@ get_header(); ?>
                     <ul id="search-result">
                     	<?php while($query->have_posts()): $query->the_post();    ?>
 						<li>
-                        	<h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-                            <?php the_excerpt();?>
+                        	<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
+                        	<p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?><p>
+                            <?php// the_excerpt();?>
                             <a href="<?php the_permalink();?>" class="more black-btn hover-red">CONTINUE</a>
                         </li>
                         <?php endwhile; ?>
@@ -50,11 +51,11 @@ get_header(); ?>
                 
                 <aside id="side-bar" class="pull-right">
                 	<div class="box-one spotlight-box">
-                        <strong>Don't find what you were looking for? ask question</strong>
-                       <?php echo do_shortcode('[contact-form-7 id="138" title="Search Page Form"]'); ?>
+                        <p><strong>Can't find what you are looking for? Let us know if we can help!</strong></p>
+                       <?php echo do_shortcode('[gravityform id="1" title="true" description="false"]'); ?>
                     </div><!--spotlight-box-->
                     
-                	<div class="proud-members">
+                	<!--<div class="proud-members">
                         <strong>PROUD MEMBER OF </strong>
                         
                         <div class="clearfix inner-wrap">
@@ -68,7 +69,7 @@ get_header(); ?>
                                         <p>Construction Industries of Massachusetts</p>
                                     </div>
                                 </div>
-                            </div><!--col-one-->
+                            </div>
                             <div class="col-two pull-right box">
                                 <div class="clearfix">
                                     <div class="logo pull-left">
@@ -79,9 +80,9 @@ get_header(); ?>
                                         <p>International Brotherhood of Electrical Workers Local 103</p>
                                     </div>
                                 </div>
-                            </div><!--col-one-->
+                            </div>
                         </div>
-                    </div><!--proud-members-->                
+                    </div>proud-members-->                
                 </aside>
             </div>
         </div>

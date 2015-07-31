@@ -118,7 +118,7 @@ function _portfolioFilter(){
 	
 	$('.filter-nav li').click(function(){
 		var currentItem = $(this).html();
-		$('.filter-nav .title').text(currentItem);
+		$('.filter-nav .title').html(currentItem);
 		$('.filter-nav').removeClass('open');
 		$('.drop-down-wrap i').removeClass('icon-arrow-up').addClass('icon-arrow-down');
 	});

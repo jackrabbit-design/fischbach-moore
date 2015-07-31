@@ -65,7 +65,7 @@ Template Name: Portfolio
 			?>
 					<li class="mix <?php echo $new_slug; ?>">
                             <div class="logo" style="background-image:url(<?php echo (wp_get_attachment_url( get_post_thumbnail_id($post->ID) ));?>)"></div>
-                            <h3><?php the_title(); ?></h3>
+                            <h3><a href="#box<?php echo ($post->ID); ?>" id = "<?php echo ($post->post_name); ?>"class="portfolio-popup"><?php the_title(); ?></a></h3>
                             <?php the_excerpt();?>
                             <a href="#box<?php echo ($post->ID); ?>" id = "<?php echo ($post->post_name); ?>"class="more black-btn hover-red portfolio-popup">VIEW PROJECT</a>
                     </li>			
@@ -92,11 +92,7 @@ Template Name: Portfolio
 	    <div id="box<?php echo ($post->ID); ?>" class="protfolio-single">
         	<h4><?php the_title(); ?></h4>
             <div class="portfolio-slider-wrap">
-				<ul class="portfolio-slider cycle-slideshow" data-cycle-fx="fade" 
-                    data-cycle-pager=".portfolio-pager1<?php echo ($post->ID); ?>"
-                    data-cycle-swipe=true
-                    data-cycle-swipe-fx=scrollHorz
-                    data-cycle-slides=">li">
+			<ul class="portfolio-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="0" data-cycle-pager=".portfolio-pager1<?php echo ($post->ID); ?>" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz data-cycle-slides=">li">
 			<?php
 				if( have_rows('post_slider_image') ):
 					while ( have_rows('post_slider_image') ) : the_row(); 
