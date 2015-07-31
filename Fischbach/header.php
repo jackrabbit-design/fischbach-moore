@@ -67,7 +67,7 @@
                             </div><!--header-contact-->
                             
                             <div class="login pull-left">
-                            	<a href="#">Employee Login</a>
+                            	<a href="http://livewire.sullymac.com/login/?redirect_to=http://livewire.sullymac.com/" target="_blank">Employee Login</a>
                             </div>
                             
                             <div class="search-wrap pull-left">

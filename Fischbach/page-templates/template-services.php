@@ -41,36 +41,7 @@ $right_img = get_field('right_featured_image');
 						?>
                     </div>
                     
-                    <div class="bottom-links">
-                    	<div class="main-content">
-                        	<h5><?php the_field('title_our_below'); ?> </h5>
-                        	<?php the_field('description_our_below'); ?>
-                        </div>
-	
-                        <div class="bottom-links">
-                        	<ul>
-					<?php
-					
-					$terms = get_field('select_category'); 
-					$slugs =  $terms->term_id; 
-						//var_dump($slugs); die;
-						$args = array('post_type'=>'portfolio', 
-						'posts_per_page' => -1, 
-						'tax_query' => array(
-						array(
-							'taxonomy' => 'portfolio-category',
-							'terms' => $slugs,
-							'field' => 'id'
-						   )
-						));
-						$result = new WP_Query($args);
-						//var_dump($args); die;
-					   while ( $result->have_posts() ) : $result->the_post(); ?>
-                            	<li><a href="#box<?php echo ($post->ID); ?>" class="more black-btn hover-red portfolio-popup"><?php the_title();?></a></li>
-                        <?php endwhile; wp_reset_postdata();?>
-                            </ul>
-                        </div>
-                    </div>
+                 
                 </article>
                 
                 <aside id="side-bar" class="pull-right">
@@ -90,8 +61,11 @@ $right_img = get_field('right_featured_image');
 						//$terms1 = get_field('select_category'); 
 						//$slugs1 =  $terms->term_id; 
 						//var_dump($slugs); die;
+						
+						$terms = get_field('select_category'); 
 						$pro_name = $terms->name;
-						//var_dump($pro_name);
+					$slugs =  $terms->term_id; 
+						//var_dump($slugs); die;
 						$args = array('post_type'=>'portfolio', 
 						'posts_per_page' => -1, 
 						'tax_query' => array(
@@ -108,7 +82,7 @@ $right_img = get_field('right_featured_image');
                             	<h4>RECENT <?php echo $pro_name; ?> PROJECTS</h4>
                                 
                                 <div class="txt-box clearfix main-content">
-                                	<h3><?php the_title(); ?></h3>
+                                	<h3><a href="#box<?php echo ($post->ID); ?>" class="portfolio-popup"><?php the_title(); ?></a></h3>
                                 	<div class="logo pull-right">
                                     	<?php the_post_thumbnail('slider-logo',array('class' => 'img-responsive')); ?>
                                     </div>                                    
