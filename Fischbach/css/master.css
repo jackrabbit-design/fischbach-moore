@@ -245,7 +245,7 @@ form ul { margin: 0; }
 form ul li { background: none; list-style: none; }
 form ul li div { display: inline-block; vertical-align: top; }
 
-input[type=text], input[type=password], input[type=url], input[type=email] { border: none; height: 34px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; font-size: 15px; font-weight: 400; color: #676767; padding: 8px 10px; }
+input[type=text], input[type=password], input[type=url], input[type=email], input[type=tel]  { border: none; height: 34px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; font-size: 15px; font-weight: 400; color: #676767; padding: 8px 10px; }
 
 textarea { border: none; height: 110px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; font-size: 15px; font-weight: 400; color: #676767; padding: 8px 10px; }
 
@@ -319,11 +319,11 @@ input[type=submit], button { display: inline-block; cursor: pointer; }
   padding-bottom: 128px;
 }
 .spotlight-box { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 35px 28px; color: #fff; margin-bottom: 5px; background-color: #cf3037; }
-.spotlight-box strong { font-size: 14px; font-weight: 700; line-height: 17px; font-family: "PTSansNarrow"; text-transform: uppercase; margin-bottom: 5px; display: block; }
+.spotlight-box strong { font-size: 14px; font-weight: 700; line-height: 17px; font-family: "PTSansNarrow"; text-transform: uppercase; margin-bottom: 0; display: block; }
 .spotlight-box p { font-size: 14px; font-weight: 400; line-height: 150%; margin-bottom: 20px; }
 .spotlight-box a{color: #fff; text-decoration: underline;}
 .spotlight-box a:hover{text-decoration: none;}
-.spotlight-box h4{font-size: 18px; font-weight: 800; margin-bottom: 5px;}
+.spotlight-box h4{font-size: 20px; font-weight: 800; margin-bottom: 5px; text-transform: uppercase;}
 
 
 .proud-members { padding: 18px 28px; background: #000; color: #fff; }
@@ -337,7 +337,7 @@ input[type=submit], button { display: inline-block; cursor: pointer; }
 
 .proud-members .member-row-bottom{display: block; clear: both; padding: 10px 0 0;}
 
-#footer { width: 100%; background: url(../images/bg-repeater.png) left top repeat; position: absolute; bottom: 0; z-index: 8; }
+#footer { width: 100%; background: url(../images/bg-repeater.png) left top repeat; position: fixed; bottom: 0; z-index: 8; }
 #footer.pg-footer { position: relative; bottom: auto; }
 #footer:before { background: rgba(0, 0, 0, 0.6); top: 0; left: 0; width: 100%; height: 100%; position: absolute; content: ''; z-index: -1; }
 #footer .col-one { font-size: 10px; font-weight: 400; line-height: 12px; color: #fff; display: inline-block; margin-top: 14px; }
@@ -366,12 +366,12 @@ input[type=submit], button { display: inline-block; cursor: pointer; }
 #side-bar { width: 44%; }
 
 .main-content { font-family: "PTSans"; }
-.main-content h3 { color: #cf3037; font-size: 20px; font-weight: 400; line-height: 150%; margin-bottom: 25px; }
+.main-content h3 { color: #cf3037; font-size: 20px; font-weight: 400; line-height: 150%; margin-bottom: 7px; }
 .main-content h4 { color: #000; font-size: 16px; font-weight: 400; line-height: 150%; margin-bottom: 13px; }
 .main-content h5 { font-size: 16px; font-weight: 400; line-height: 150%; color: #000; margin-bottom: 6px; display: block; }
 .main-content p { font-size: 15px; font-weight: 400; line-height: 150%; color: #676767; margin-bottom: 20px; }
-.main-content p a { color: #d32a2e; }
-.main-content p a:hover { color: #000; }
+.main-content a { color: #d32a2e; }
+.main-content a:hover { color: #000; }
 .main-content p + ul { padding-top: 10px; }
 .main-content ul { margin-bottom: 20px; }
 .main-content ul li { display: block; position: relative; color: #676767; font-size: 15px; font-weight: 400; line-height: 18px; padding-left: 35px; margin-bottom: 5px; }
@@ -447,6 +447,32 @@ input[type=submit], button { display: inline-block; cursor: pointer; }
 
 #search-result li { padding-top: 30px; border-top: 3px solid #eaeaea; margin-bottom: 30px; }
 #search-result li:first-child { border-top: none; padding-top: 0; }
+
+.contact-us h3{font-size: 20px; font-weight: 800; margin-bottom: 5px; text-transform: uppercase;}
+
+.contact-us .gform_body{margin: 10px 0;}
+
+.contact-us li > label{font-family: "PTSans"; text-transform: uppercase; letter-spacing: .2px;}
+
+.contact-us li{width: 100%; margin-bottom: 5px;}
+
+.contact-us li input{width: 100%; margin-bottom: 10px;}
+
+.contact-us li div{width: 100%;}
+
+
+.contact-us li .ginput_complex span{width: 49%;  display:block;}
+
+.contact-us li .ginput_complex span.name_last{float: left;}
+
+.contact-us li .ginput_complex span.name_first{float: right;}
+
+.contact-us input.gform_button{ background: #000; color: #fff; text-decoration: none; border: none; font-size: 11px; font-weight: 400; padding: 6px 6px; line-height: 11px; position: relative; display: inline-block; text-transform: uppercase;}
+
+.contact-us input.gform_button:after{width: 0; height: 0; border-style: solid; border-width: 4px 0 4px 4px; border-color: transparent transparent transparent #ffffff; top: 50%; margin-top: -4px; position: absolute; content: ''; right: 8px;}
+
+.gform_validation_container{display: none !important;}
+
 /* --------------------------- Color box -----------*/
 #colorbox, #cboxOverlay, #cboxWrapper { position: absolute; top: 0; left: 0; z-index: 9999; overflow: hidden; }
 

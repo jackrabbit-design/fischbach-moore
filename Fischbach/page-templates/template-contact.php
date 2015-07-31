@@ -6,7 +6,7 @@
  * @subpackage Frischbach
  */
 
-get_header();
+get_header(); the_post();
 $left_img1 = get_field('left_featured_image');
 $right_img1 = get_field('right_featured_image');
  ?>
@@ -32,18 +32,18 @@ $right_img1 = get_field('right_featured_image');
         	<div class="container-inner clearfix">
             	<article id="article" class="main-content pull-left">
                 	<?php 
-						while ( have_posts() ) : the_post();
+						
 						the_content(); 
-						endwhile;
+					
 						?>
                 </article>
                 
                 <aside id="side-bar" class="pull-right">
-
+					<div class="box-one spotlight-box">
+						<?php the_field('contact_sidebar'); ?>
+					</div>
                 </aside>
-
-
-                           </div>
+            </div>
         </div>
     </section>
 
