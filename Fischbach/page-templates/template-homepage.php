@@ -70,25 +70,25 @@ $home_bg =  get_field( "image_home" );
 							{
 								?>
                         <div class="box-two proud-members">
-                        	<strong><?php the_field('heading_proud'); ?></strong>
+                        	<strong><?php the_field('heading_proud', 'options'); ?></strong>
                             
                             <div class="clearfix inner-wrap">
                             	<div class="member-row">
 	                            	<div class="col-one pull-left box">
 	                                	<div class="clearfix">
 	                                    	<div class="logo pull-left">
-	                                        	<img src="<?php the_field('image_left_proud'); ?>" width="50" height="51" alt="" />
+	                                        	<img src="<?php the_field('image_left_proud', 'options'); ?>" alt="" />
 	                                        </div>
 	                                        <div class="content pull-right">
-	                                        	<h5><?php the_field('title_left_proud'); ?></h5>
-	                                            <p><?php the_field('short_description_left_proud'); ?></p>
+	                                        	<h5><?php the_field('title_left_proud', 'options'); ?></h5>
+	                                            <p><?php the_field('short_description_left_proud', 'options'); ?></p>
 	                                        </div>
 	                                    </div>
 	                                </div><!--col-one-->
 	                                <div class="col-two pull-right box">
 	                                	<div class="clearfix">
 	                                    	<div class="logo pull-left">
-	                                        	<img src="<?php the_field('image_right_proud'); ?>" width="50" height="51" alt="" />
+	                                        	<img src="<?php the_field('image_right_proud', 'options'); ?>"  alt="" />
 	                                        </div>
 	                                        <div class="content pull-right">
 	                                        	<h5><?php the_field('title_right_proud'); ?></h5>
@@ -102,12 +102,12 @@ $home_bg =  get_field( "image_home" );
 	       							<div class="col-one pull-left box">
 	                                	<div class="clearfix">
 	                                    	<div class="logo pull-left">
-	                                    		<?php $imagePL = get_field('image_left_proud_2'); ?>
+	                                    		<?php $imagePL = get_field('image_left_proud_2', 'options'); ?>
 	                                        	<img src="<?php echo $imagePL; ?>" width="50" height="51" alt="" />
 	                                        </div>
 	                                        <div class="content pull-right">
-	                                        	<h5><?php the_field('title_left_proud_2'); ?></h5>
-	                                            <p><?php the_field('short_description_left_proud_2'); ?></p>
+	                                        	<h5><?php the_field('title_left_proud_2', 'options'); ?></h5>
+	                                            <p><?php the_field('short_description_left_proud_2', 'options'); ?></p>
 	                                        </div>
 	                                    </div>
 	                                </div><!--col-one-->
