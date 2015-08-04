@@ -84,7 +84,7 @@ $right_img = get_field('right_featured_image');
                                 <div class="txt-box clearfix main-content">
                                 	<h3><a href="#box<?php echo ($post->ID); ?>" class="portfolio-popup"><?php the_title(); ?></a></h3>
                                 	<div class="logo pull-right">
-                                    	<?php the_post_thumbnail('slider-logo',array('class' => 'img-responsive')); ?>
+                                    	<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
                                     </div>                                    
                                     <div class="content pull-left">
                                         <?php the_excerpt(); ?>
