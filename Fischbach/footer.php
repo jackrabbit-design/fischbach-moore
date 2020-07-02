@@ -14,7 +14,9 @@
     	<div class="container">
         	<div class="container-inner clearfix">
             	<div class="col-one pull-left">
-					<?php dynamic_sidebar('sidebar-5'); ?>
+					<?php //dynamic_sidebar('sidebar-5'); ?>
+					<p>&copy; COPYRIGHT <?php echo date('Y'); ?>. FISCHBACH & MOORE.</p>
+                    <span class="jackrabbit"><a href="http://www.jumpingjackrabbit.com" title="Website Design by Jackrabbit" target="_blank">Website Design</a> by <a href="http://www.jumpingjackrabbit.com" title="Website Design by Jackrabbit" target="_blank">Jackrabbit</a></span>
                 </div>
                 
                 <div class="pull-right col-two">

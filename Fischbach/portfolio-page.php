@@ -60,10 +60,10 @@ Template Name: Portfolio
 				$query = new wp_query(array('post_type'=>'portfolio'));
 				while($query->have_posts()): $query->the_post();
 					$slug = get_the_terms($post->ID,'portfolio-category');
-					$new_slug = $slug[0]->slug;
-					//var_dump($new_slug);
+					//$new_slugs = $slug->slug;
+					//var_dump($slug);
 			?>
-					<li class="mix <?php echo $new_slug; ?>">
+					<li class="mix <?php foreach($slug as $sl) { echo $sl->slug.' ';} ?>">
                             <div class="logo" style="background-image:url(<?php echo (wp_get_attachment_url( get_post_thumbnail_id($post->ID) ));?>)"></div>
                             <h3><a href="#box<?php echo ($post->ID); ?>" id = "<?php echo ($post->post_name); ?>"class="portfolio-popup"><?php the_title(); ?></a></h3>
                             <?php the_excerpt();?>
@@ -91,19 +91,28 @@ Template Name: Portfolio
 	
 	    <div id="box<?php echo ($post->ID); ?>" class="protfolio-single">
         	<h4><?php the_title(); ?></h4>
+        	<?php 	if( have_rows('post_slider_image') ): ?>
             <div class="portfolio-slider-wrap">
-			<ul class="portfolio-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="0" data-cycle-pager=".portfolio-pager1<?php echo ($post->ID); ?>" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz data-cycle-slides=">li">
+			<ul class="portfolio-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="0" data-cycle-pager=".portfolio-pager1<?php echo ($post->ID); ?>" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz data-cycle-slides=">li" data-cycle-paused="true">
 			<?php
-				if( have_rows('post_slider_image') ):
+			
 					while ( have_rows('post_slider_image') ) : the_row(); 
 					$image = get_sub_field('image');?>
                     <li style="background-image:url(<?php echo $image; ?>)"></li>
-			<?php   endwhile;
-				endif;	?>
+			<?php endwhile; ?>
+				
                 </ul>
+             
                 <div class="portfolio-pager portfolio-pager1<?php echo ($post->ID); ?>"></div>
+             
+            </div>
+            <?php else :  ?>
+            
+            <div class="no-slider" style="background: url(<?php the_field('default_port_image', 'options'); ?>) no-repeat center center;">
+            	
             </div>
             
+			<?php endif; ?>
             <div class="portfolio-content main-content">                
                 <div class="sec-row">  
                 		<img src="<?php echo (wp_get_attachment_url( get_post_thumbnail_id() ));?>" alt="" class="alignright" />              		

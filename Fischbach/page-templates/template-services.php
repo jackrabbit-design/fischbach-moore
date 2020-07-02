@@ -148,6 +148,18 @@ $right_img = get_field('right_featured_image');
 	                                        </div>
 	                                    </div>
 	                                </div><!--col-one-->
+	                                
+	                                <div class="col-two pull-right box">
+                                        <div class="clearfix">
+                                            <div class="logo pull-left">
+                                                <img src="<?php the_field('image_proud_2', 'options'); ?>"  alt="" />
+                                            </div>
+                                            <div class="content pull-right">
+                                                <h5><?php the_field('title_proud_2', 'options'); ?></h5>
+                                                <p><?php the_field('short_description_proud_2', 'options'); ?></p>
+                                            </div>
+                                        </div>
+                                    </div><!--col-two-->
 
                                 </div>
                             </div>

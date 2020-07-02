@@ -41,6 +41,8 @@ jQuery(function($){
 	_mobilemenu();
 	_portfolioFilter();
 	_portfolioPopUp();
+	
+	$('.contact-us').validate();
 
 	if(window.location.hash) {
 		var hash = window.location.hash.substring(1);

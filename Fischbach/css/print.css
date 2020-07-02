@@ -1,0 +1,5 @@
+   nav,.header-top{display: none !important;}
+   #pg-banner .banner-wrap{display: none !important}
+   #pg-banner{height: 300px; top: auto;}
+   #article{width: 100%;}
+   #side-bar{display: none;}
