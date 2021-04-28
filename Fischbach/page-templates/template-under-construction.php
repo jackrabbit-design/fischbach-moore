@@ -1,15 +1,11 @@
 <?php
-wp_safe_redirect( get_permalink( 540 ) );
-exit;
 /**
- * The Header for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
+ * Template Name: Under Construction
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Frischbach
  */
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,16 +48,22 @@ exit;
 	gtag('config', 'UA-170305472-1');
 	</script>
 
+	<style>
+		#header .header-top:before {
+			display: none;
+		}
+	</style>
+
 	<!-- Work -->
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 	<!--[if lte IE 7]><iframe src="unsupported.html" frameborder="0" scrolling="no" id="no_ie6"></iframe><![endif]-->
 	<!-- NOTE
 		add pg-footer class interior pages FOOTER
 		is not home :)
 		-->
-	<header id="header">
-		<div class="header-top">
+	<header id="header" style="position: fixed; width: 100%; top: 25vh;">
+		<div class="header-top" style="background: transparent !important">
 			<div class="container">
 				<div class="container-inner clearfix">
 					<h1 id="logo" class="pull-left">
@@ -71,96 +73,36 @@ exit;
 						</a>
 					</h1>
 
-					<div class="header-right pull-right hidden-s">
-						<div class="clearfix">
-							<div class="header-contact pull-left">
-								<ul>
-									<li><?php echo get_option( 'fischbach_headadd' ); ?></li>
-									<li><?php echo get_option( 'fischbach_mobileno' ); ?></li>
-								</ul>
-							</div><!--header-contact-->
-
-							<div class="login pull-left">
-								<a href="http://livewire.sullymac.com/login/?redirect_to=http://livewire.sullymac.com/" target="_blank">Employee Login</a>
-							</div>
-
-							<div class="search-wrap pull-left">
-								<form  method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-									<ul>
-										<li>
-											<div>
-												<input type="text" name = "s" value = "<?php the_search_query(); ?>" placeholder="Search" />
-												<span><i class="icon-search"></i></span>
-											</div>
-										</li>
-									</ul>
-								</form>
-							</div>
-						</div>
-					</div><!--header-right-->
 				</div>
 			</div>
 		</div>
+
 
 		<div class="main-nav-wrap">
 			<div class="container">
 				<div class="container-inner clearfix">
-				<nav id="main-nav" class="pull-right hidden-s">
-				<?php
-				wp_nav_menu(
-					array(
-						'container'      => 'ul',
-						'menu_id'        => 'nav',
-						'theme_location' => 'primary',
-					)
-				);
-				?>
-					</nav>
-					<div class="pull-right visible-s">
-						<a class="phone pull-left" href="tel:617.268.7300"><i class="icon-call-phone"></i></a>
-						<div id="toggle_menu_btn" class="pull-left"><span></span></div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="mobile-menu-wrap">
-			<nav id="mobile-nav">
-				<?php
-				wp_nav_menu(
-					array(
-						'container'      => 'ul',
-						'menu_id'        => 'nav',
-						'theme_location' => 'mobile-menu',
-					)
-				);
-				?>
-			</nav>
-
-			<div class="bottom-wrap">
-				<div class="login">
-					<a href="#">Employee Login</a>
-				</div>
-
-				<div class="search-wrap">
-					<form  method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+					<nav id="main-nav" class="pull-left hidden-s" style="margin-left: 175px;">
 						<ul>
-							<li>
-								<div>
-									<input type="text" name = "s" value = "<?php the_search_query(); ?>" placeholder="Search" />
-									<span><i class="icon-search"></i></span>
-								</div>
-							</li>
+							<li><a href='/' style="font-size: 32px; pointer-events: none;">Site Under Construction</a></li>
 						</ul>
-					</form>
+					</nav>
 				</div>
-			</div><!--bottom-wrap-->
-
-			<div class="mobile-contact">
-				<ul>
-					<li><?php echo get_option( 'fischbach_headadd' ); ?></li>
-					<li><?php echo get_option( 'fischbach_mobileno' ); ?></li>
-				</ul>
 			</div>
 		</div>
+
 	</header>
+
+<?php
+
+$home_bg =  get_field( "image_home", 5 );
+$focal_point = get_field( 'background_position', 5 );
+?>
+
+	<div id="home-body"  style="padding-bottom: 0 !important">
+		<div class="bg-image" style="background-image:url(<?php echo $home_bg; ?>); <?php echo ($focal_point) ? "background-position: {$focal_point}" : ""; ?>"></div><!--bg-image-->
+
+	</div>
+
+<?php wp_footer(); ?>
+</body>
+</html>
